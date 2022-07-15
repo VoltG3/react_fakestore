@@ -5,8 +5,8 @@ html, body {
 
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100vw;
+    height: 100vh;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -14,4 +14,7 @@ code {
   font-family: Consolas, 'Courier New', monospace;
 }
 
+* {
+  border: dotted 1px lightgray;
+}
 
