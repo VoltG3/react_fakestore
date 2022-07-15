@@ -1,17 +1,17 @@
 import styled from "styled-components"
+import ProductList from "./ProductList.js"
 
 const StyledPageContainer = styled.div`
   display: flex;
   flex-direction: column;
     width: 100vw;
-    height: 100vh;
-  background-color: var(--background-color-2);
+    height: auto;
 `
 
 export default function App() {
     return (
         <StyledPageContainer>
-
+            <ProductList />
         </StyledPageContainer>
     )
 }

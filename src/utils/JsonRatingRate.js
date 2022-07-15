@@ -1,0 +1,15 @@
+
+export const Rating = (target) => {
+    let tmp = JSON.stringify(target)
+    tmp = tmp.replace(/"rate"/, "")
+    tmp = tmp.replace(/"count"/, "")
+    tmp = tmp.replace(/:/, "")
+    tmp = tmp.replace(/{/g, "")
+    tmp = tmp.replace(/}/g, "")
+    tmp = tmp.replace(/\"/g, "")
+
+    let arrTmp = tmp.split(",")
+    // console.log(arrTmp)
+
+    return arrTmp[0]
+}
