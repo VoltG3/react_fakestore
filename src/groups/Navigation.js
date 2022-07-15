@@ -1,5 +1,8 @@
+import data from "../data.js"
 import styled from "styled-components"
 import NavigationButton from "../components/NavigationButton.js"
+import { categoryList } from "../utils/JsonCategoryList.js"
+import { useGetUniqueKey } from "react-generate-unique-key-for-map";
 
 const StyledNavigationContainer = styled.div`
   display: flex;
@@ -18,6 +21,17 @@ const StyledNavigationBottomSection = styled.div`
 `
 
 export default function Navigation() {
+    const getUniqueKey = useGetUniqueKey()
+    const category = categoryList().map(item => {
+
+       return (
+           <NavigationButton
+               key={ getUniqueKey(categoryList()) }
+               buttonLabel={ item }
+           />
+       )
+    })
+
     return (
         <StyledNavigationContainer>
             <StyledNavigationTopSection>
@@ -25,11 +39,7 @@ export default function Navigation() {
             </StyledNavigationTopSection>
 
             <StyledNavigationBottomSection>
-                <NavigationButton buttonLabel={"Men's clothing"} />
-                <NavigationButton buttonLabel={"Women's clothing"} />
-                <NavigationButton buttonLabel={"Electronic"} />
-                <NavigationButton buttonLabel={"Jewelery"} />
-                <NavigationButton buttonLabel={"All products"} />
+                { category }
             </StyledNavigationBottomSection>
         </StyledNavigationContainer>
     )
