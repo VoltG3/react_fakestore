@@ -1,3 +1,4 @@
+
 export const Count = (target) => {
     let tmp = JSON.stringify(target)
     tmp = tmp.replace(/"rate"/, "")

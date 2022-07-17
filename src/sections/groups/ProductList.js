@@ -1,8 +1,7 @@
-import styled from "styled-components"
-import data from "../data.js"
-import ProductTile from "../components/ProductTile.js"
-import { Rating } from "../utils/JsonRatingRate.js"
-import { Count } from "../utils/JsonCount.js"
+import ProductTile from "./components/ProductListTile.js"
+import { Rating } from "../../utils/JsonRatingRate.js"
+import { Count } from "../../utils/JsonCount.js"
+import data from "../../data.js"
 
 export default function ProductList() {
     const productTile = data.map(item => {

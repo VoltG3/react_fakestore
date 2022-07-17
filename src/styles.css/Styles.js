@@ -1,14 +1,11 @@
 import { createGlobalStyle } from "styled-components"
 
-export const RootStyles = createGlobalStyle`
-
+export const Styles = createGlobalStyle`
+  
   :root {
     --color-primary: #103a43;
-
     --color-primary-hover: #1f6b7c;
-
-    --background-color-2: lightgray;
-
+    
     --footer-font-size: 12px;
   }
 

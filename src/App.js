@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { RootStyles } from "./Root.styles.js"
-import Header from "./groups/Header.js"
-import Page from "./groups/Page.js"
-import Footer from "./groups/Footer.js"
+import { Styles } from "./styles.css/Styles.js"
+import Header from "./sections/Header.js"
+import Page from "./sections/Page.js"
+import Footer from "./sections/Footer.js"
 
 const StyledAppContainer = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const StyledAppContainer = styled.div`
 export default function App() {
     return (
         <StyledAppContainer>
-            <RootStyles />
+            <Styles />
                 <Header />
                 <Page />
                 <Footer />

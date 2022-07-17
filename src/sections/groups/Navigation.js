@@ -1,24 +1,9 @@
-import data from "../data.js"
-import styled from "styled-components"
-import NavigationButton from "../components/NavigationButton.js"
-import { categoryList } from "../utils/JsonCategoryList.js"
+import NavigationButton from "./components/NavigationButton.js"
+import { categoryList } from "../../utils/JsonCategoryList.js"
 import { useGetUniqueKey } from "react-generate-unique-key-for-map";
-
-const StyledNavigationContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const StyledNavigationTopSection = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-const StyledNavigationBottomSection = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-`
+import { StyledNavigationContainer,
+         StyledNavigationTopSection,
+         StyledNavigationBottomSection } from "../../styles.css/Group.Navigation.style.js";
 
 export default function Navigation() {
     const getUniqueKey = useGetUniqueKey()
