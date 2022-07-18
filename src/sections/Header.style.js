@@ -7,6 +7,8 @@ export const StyledHeaderContainer = styled.div`
   "."
   ".";
   color: var(--color-primary);
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--color-primary);
 `
 
 export const StyledHeaderTopSection = styled.div`
