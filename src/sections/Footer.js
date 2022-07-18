@@ -1,4 +1,21 @@
-import { StyledFooterContainer } from "../styles.css/Section.Footer.style.js";
+import styled from "styled-components";
+
+const StyledFooterContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+  font-family: var(--font-primary);
+  font-size: var(--footer-font-size);
+  
+  * { margin-left: 6px;
+      color: var(--color-primary);
+  }
+  
+  a:hover {
+    color: red;
+  }
+`
 
 export default function Footer() {
     return (

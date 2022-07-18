@@ -1,19 +1,18 @@
-import Navigation from "./groups/Navigation.js"
+import NavProducts from "./groups/NavProducts.js"
+import NavUser from "./groups/NavUser.js"
+import SvgLogo from "./groups/components/SvgLogo.js"
 import { StyledHeaderContainer,
          StyledHeaderTopSection,
-         StyledHeaderBottomSection } from "../styles.css/Section.Header.style"
+         StyledHeaderBottomSection } from "./Header.style.js"
 
 export default function Header() {
     return (
         <StyledHeaderContainer>
-            <StyledHeaderTopSection>
-
-            </StyledHeaderTopSection>
-
+            <StyledHeaderTopSection />
             <StyledHeaderBottomSection>
-                <p>FakeStore</p>
-                <Navigation />
-                <p>basket</p>
+                <SvgLogo />
+                <NavProducts />
+                <NavUser />
             </StyledHeaderBottomSection>
         </StyledHeaderContainer>
     )

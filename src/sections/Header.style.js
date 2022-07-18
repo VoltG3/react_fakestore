@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const StyledHeaderContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 2em;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  "."
+  ".";
   color: var(--color-primary);
-
 `
 
 export const StyledHeaderTopSection = styled.div`

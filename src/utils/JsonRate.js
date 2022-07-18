@@ -1,5 +1,5 @@
 
-export const Rating = (target) => {
+export const Rate = (target) => {
     let tmp = JSON.stringify(target)
     tmp = tmp.replace(/"rate"/, "")
     tmp = tmp.replace(/"count"/, "")

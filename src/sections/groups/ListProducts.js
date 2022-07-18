@@ -1,19 +1,19 @@
-import ProductTile from "./components/ProductListTile.js"
-import { Rating } from "../../utils/JsonRatingRate.js"
+import ProductItem from "./components/ListProductsItem.js"
+import { Rate } from "../../utils/JsonRate.js"
 import { Count } from "../../utils/JsonCount.js"
 import data from "../../data.js"
 
-export default function ProductList() {
-    const productTile = data.map(item => {
+export default function ListProducts() {
+    const productItem = data.map(item => {
 
         return (
-            <ProductTile
+            <ProductItem
                 key = { item.id }
                 image = { item.image }
                 title = { item.title }
                 description = { item.description }
                 price = { item.price }
-                rate = {item.rate = Rating(item.rating) }
+                rate = {item.rate = Rate(item.rating) }
                 count = { item.count = Count(item.rating)}
             />
         )
@@ -21,7 +21,7 @@ export default function ProductList() {
 
     return (
         <>
-            { productTile }
+            { productItem }
         </>
     )
 }

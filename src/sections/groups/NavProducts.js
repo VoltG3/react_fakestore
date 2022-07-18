@@ -1,16 +1,16 @@
-import NavigationButton from "./components/NavigationButton.js"
+import NavProductsBtn from "./components/NavProductsBtn.js"
 import { categoryList } from "../../utils/JsonCategoryList.js"
 import { useGetUniqueKey } from "react-generate-unique-key-for-map";
 import { StyledNavigationContainer,
          StyledNavigationTopSection,
-         StyledNavigationBottomSection } from "../../styles.css/Group.Navigation.style.js";
+         StyledNavigationBottomSection } from "./NavProducts.style.js";
 
-export default function Navigation() {
+export default function NavProducts() {
     const getUniqueKey = useGetUniqueKey()
     const category = categoryList().map(item => {
 
        return (
-           <NavigationButton
+           <NavProductsBtn
                key={ getUniqueKey(categoryList()) }
                buttonLabel={ item }
            />

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Styles } from "./styles.css/Styles.js"
+import { GlobalRootStyles } from "./Root.styles.js"
 import Header from "./sections/Header.js"
 import Page from "./sections/Page.js"
 import Footer from "./sections/Footer.js"
@@ -14,7 +14,7 @@ const StyledAppContainer = styled.div`
 export default function App() {
     return (
         <StyledAppContainer>
-            <Styles />
+            <GlobalRootStyles />
                 <Header />
                 <Page />
                 <Footer />
