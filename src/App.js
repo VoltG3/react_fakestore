@@ -1,7 +1,7 @@
+import { Outlet, Link } from "react-router-dom";
 import styled from "styled-components"
 import { GlobalRootStyles } from "./Root.styles.js"
 import Header from "./sections/Header.js"
-import Page from "./sections/Page.js"
 import Footer from "./sections/Footer.js"
 
 const StyledAppContainer = styled.div`
@@ -16,7 +16,11 @@ export default function App() {
         <StyledAppContainer>
             <GlobalRootStyles />
                 <Header />
-                <Page />
+                    <Link to="/products">Products</Link>
+                    <Link to="/cart">Cart</Link> |{" "}
+                    <Link to="/login">Login</Link>
+                    <Link to="/home">home</Link>
+                <Outlet />
                 <Footer />
         </StyledAppContainer>
     )

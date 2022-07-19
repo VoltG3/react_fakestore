@@ -1,4 +1,3 @@
-import ListProducts from "./groups/ListProducts.js"
 import styled from "styled-components";
 
 const StyledPageContainer = styled.div`
@@ -8,10 +7,10 @@ const StyledPageContainer = styled.div`
     height: auto;
 `
 
-export default function App() {
+export default function Home() {
     return (
         <StyledPageContainer>
-            <ListProducts />
+            <p>Home</p>
         </StyledPageContainer>
     )
 }
