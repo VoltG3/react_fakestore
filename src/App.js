@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import styled from "styled-components"
 import { GlobalRootStyles } from "./Root.styles.js"
 import Header from "./sections/Header.js"
@@ -16,10 +16,7 @@ export default function App() {
         <StyledAppContainer>
             <GlobalRootStyles />
                 <Header />
-                    <Link to="/products">Products</Link>
-                    <Link to="/cart">Cart</Link> |{" "}
-                    <Link to="/login">Login</Link>
-                    <Link to="/home">home</Link>
+                    {/*<Link to="/products">Products</Link>*/}
                 <Outlet />
                 <Footer />
         </StyledAppContainer>
