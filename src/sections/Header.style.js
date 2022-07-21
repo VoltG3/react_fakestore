@@ -12,12 +12,15 @@ export const StyledHeaderContainer = styled.div`
 `
 
 export const StyledHeaderTopSection = styled.div`
-  height: 3vh;
+  height: 4vh;
+  font-size: 12px;
+  padding-left: 2em;
   background-color: var(--color-primary);
 `
 
 export const StyledHeaderBottomSection = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
 `

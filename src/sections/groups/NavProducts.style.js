@@ -16,3 +16,4 @@ export const StyledNavigationBottomSection = styled.div`
   flex-direction: row;
   gap: 15px;
 `
+

@@ -1,16 +1,16 @@
-import styled from "styled-components";
-
-const StyledPageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-    width: 100vw;
-    height: auto;
-`
+import {
+    StyledMessageContainer,
+    StyledMessageGreen,
+    StyledPageContainer} from "./routes.style.js"
 
 export default function Home() {
     return (
         <StyledPageContainer>
-            <p>Home</p>
+            <StyledMessageContainer>
+                <StyledMessageGreen>
+                    <p>Home</p>
+                </StyledMessageGreen>
+            </StyledMessageContainer>
         </StyledPageContainer>
     )
 }

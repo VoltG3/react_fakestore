@@ -16,7 +16,6 @@ export default function App() {
         <StyledAppContainer>
             <GlobalRootStyles />
                 <Header />
-                    {/*<Link to="/products">Products</Link>*/}
                 <Outlet />
                 <Footer />
         </StyledAppContainer>

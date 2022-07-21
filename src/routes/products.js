@@ -1,12 +1,5 @@
 import ListProducts from "../sections/groups/ListProducts.js"
-import styled from "styled-components";
-
-const StyledPageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-    width: 100vw;
-    height: auto;
-`
+import { StyledPageContainer } from "./routes.style.js"
 
 export default function Products() {
     return (

@@ -12,8 +12,8 @@ export const GlobalRootStyles = createGlobalStyle`
     --font-secondary: 'Brygada 1918', serif;
     --font-accent: 'Edu TAS Beginner', cursive;
 
-    --footer-font-size: 1rem;
+    --footer-font-size: 10px;
   }
-
+  
   a { text-decoration: none; }
 `
