@@ -12,6 +12,7 @@ export default function Header() {
             <StyledHeaderTopSection />
             <StyledHeaderBottomSection>
                 <Link to="/home"><SvgLogo /></Link>
+                <Link to="/NoMatch">NoMatch</Link>
                 <NavProducts />
                 <NavUser />
             </StyledHeaderBottomSection>

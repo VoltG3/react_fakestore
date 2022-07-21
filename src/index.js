@@ -10,6 +10,7 @@ import Home from './routes/home.js'
 import Products from "./routes/products.js";
 import Cart from "./routes/cart.js";
 import LogIn from "./routes/login.js";
+import Empty from "./routes/empty.js"
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -20,6 +21,7 @@ root.render(
                 <Route path="products" element={<Products />} />
                 <Route path="cart" element={<Cart />} />
                 <Route path="login" element={<LogIn />} />
+                <Route path="*" element={<Empty />} />
             </Route>
         </Routes>
     </BrowserRouter>
