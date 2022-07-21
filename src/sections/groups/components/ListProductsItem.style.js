@@ -4,7 +4,7 @@ export const StyledProductContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-self: center;
-    max-width: 1440px;
+    max-width: var(--max-width);
         width: 90vw;
   margin: 2em 0 2em 0;
   
@@ -29,19 +29,41 @@ export const StyledProductContainerInner = styled.div`
   div:nth-child(5) { grid-row: 4 / 5; grid-column: 4 / 4;}  // price
   div:nth-child(6) { grid-row: 3 / 3; grid-column: 2 / 2;}  // stars
   
+  @media only screen and (max-width: 320px) {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 0.5em;
+      "title title"
+      "img   stars"
+      "img   rates"
+      "img   rates"
+      "texts texts"
+      "price price";
+
+    div:nth-child(2) { grid-row: 1 / 1; grid-column: 1 / 3;}  // title
+    div:nth-child(1) { grid-row: 2 / 4; grid-column: 1 / 1;}  // image
+    div:nth-child(6) { grid-row: 2 / 2; grid-column: 2 / 3;}  // stars
+    div:nth-child(4) { grid-row: 3 / 4; grid-column: 2 / 3;}  // rates
+    div:nth-child(3) { grid-row: 5 / 5; grid-column: 1 / 3;}  // texts
+    div:nth-child(5) { grid-row: 6 / 6; grid-column: 2 / 3;}  // price
+    
+  }
+  
   // image
   div:nth-child(1) {
     display: flex;
     align-items: center;
-    padding-right: 3em;
-        img { width: 10vw;}
+    padding-right: var(--product-img-padding-right); 
+        img { width: var(--product-img-width);}
         img:hover { transform: scale(1.5); }
   }
   
   // title
   div:nth-child(2) {
     h2 {
-      font-family: var(--font-secondary);
+      font-family: var(--font-primary);
+      font-size: var(--product-fontsize-title);
+      letter-spacing: 1px;
       color: var(--color-secondary);
     }
   }
@@ -49,6 +71,7 @@ export const StyledProductContainerInner = styled.div`
   //texts
   div:nth-child(3) {
     p {
+      font-size: var(--product-fontsize-description);
       letter-spacing: 1px;
       line-height: 23px;
       color: var(--color-secondary);
@@ -57,15 +80,21 @@ export const StyledProductContainerInner = styled.div`
   
   // rates
   div:nth-child(4) {
+    font-size: var(--product-fontsize-ratingcount);
     color: var(--color-secondary);
   }
   
   // price
   div:nth-child(5) {
     font-weight: 500;
-    font-size: 28px;
+    font-size: var(--product-fontsize-price);
     font-family: var(--font-accent);
     color: var(--color-secondary);
+  }
+  
+  // stars
+  div:nth-child(6) {
+    
   }
 `
 

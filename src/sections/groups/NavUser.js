@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import SvgCart from "./components/SvgCart"
-import SvgUser from "./components/SvgUser"
+import SvgCart from "./components/svg/SvgCart.js"
+import SvgUser from "./components/svg/SvgUser.js"
 import {Link} from "react-router-dom";
 
 const StyledSvg = styled.div`

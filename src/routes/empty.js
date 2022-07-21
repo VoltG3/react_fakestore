@@ -8,7 +8,7 @@ export default function Empty() {
         <StyledPageContainer>
             <StyledMessageContainer>
                 <StyledMessageRed>
-                    <p>Login</p><p>There's nothing here!</p>
+                   <p>There's nothing here!</p>
                 </StyledMessageRed>
             </StyledMessageContainer>
         </StyledPageContainer>

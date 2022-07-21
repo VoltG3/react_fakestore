@@ -5,6 +5,7 @@ export const StyledPageContainer = styled.div`
   flex-direction: column;
     width: 100vw;
     height: 100%;
+  padding-top: var(--padding-top);
 `
 
 export const StyledMessageContainer = styled.div`
@@ -14,6 +15,10 @@ export const StyledMessageContainer = styled.div`
   align-items: center;
     width: 100vw;
     height: 100%;
+  
+  @media only screen and (max-width: 320px) {
+    justify-content: start;
+  }
 `
 
 export const StyledMessageGreen = styled.div`
@@ -27,6 +32,12 @@ export const StyledMessageGreen = styled.div`
   p {
     color: #1a461a;
   }
+  
+  @media only screen and (max-width: 320px) {
+    font-size: 12px;
+    width: 80vw;
+    height: 5vh;
+  }
 `
 
 export const StyledMessageRed = styled.div`
@@ -39,5 +50,11 @@ export const StyledMessageRed = styled.div`
 
   p {
     color: #590d0d;
+  }
+
+  @media only screen and (max-width: 320px) {
+    font-size: 12px;
+    width: 80vw;
+    height: 5vh;
   }
 `
