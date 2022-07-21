@@ -6,7 +6,7 @@ import NavProducts from "./groups/NavProducts.js"
 import NavUser from "./groups/NavUser.js"
 import NavUserMobile from "./groups/NavUserMobile.js";
 import { NavDropDown } from "./groups/NavDropDown.js";
-import SvgLogo from "./groups/components/SvgLogo.js"
+import Logo from "./groups/components/Logo.js"
 import { Link } from "react-router-dom"
 
 export default function Header() {
@@ -16,7 +16,7 @@ export default function Header() {
                 <StyledHeaderTopSection />
 
                 <StyledHeaderBottomSection>
-                    <Link to="/home"><SvgLogo /></Link>
+                    <Link to="/home"><Logo /></Link>
                     <NavProducts />
                     <NavUser />
                 </StyledHeaderBottomSection>
