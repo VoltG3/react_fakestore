@@ -7,15 +7,16 @@ import NavProducts from "./NavProducts.js";
 export const NavDropDown = () => {
     const [state, setState] = useState({
         isPaneOpen: false,
-        isPaneOpenLeft: false,
+        isPaneOpenLeft: false
     });
 
     return (
         <div>
-            <div style={{ marginTop: "32px" }}>
-                <button onClick={() => setState({ isPaneOpenLeft: true })}>
+            <div
+                style={{ marginTop: "10px" }}>
+                <div onClick={() => setState({ isPaneOpenLeft: true })}>
                     <SvgMenuMobile />
-                </button>
+                </div>
             </div>
 
             <SlidingPane

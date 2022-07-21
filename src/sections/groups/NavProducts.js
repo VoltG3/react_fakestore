@@ -4,7 +4,8 @@ import { useGetUniqueKey } from "react-generate-unique-key-for-map";
 import { StyledNavigationContainer,
          StyledNavigationTopSection,
          StyledNavigationBottomSection } from "./NavProducts.style.js";
-import { Link } from "react-router-dom";
+import Logo from "./components/Logo.js";
+import {Link} from "react-router-dom";
 
 export default function NavProducts() {
     const getUniqueKey = useGetUniqueKey()
@@ -21,11 +22,7 @@ export default function NavProducts() {
     return (
         <StyledNavigationContainer>
             <StyledNavigationTopSection>
-                <Link
-                    style={{color: 'var(--color-primary)'}}
-                    to="/NoMatch">
-                        <h1>FakeStore</h1>
-                </Link>
+                <Link to="/home"><Logo /></Link>
             </StyledNavigationTopSection>
 
             <StyledNavigationBottomSection>

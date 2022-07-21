@@ -16,7 +16,7 @@ export default function Header() {
                 <StyledHeaderTopSection />
 
                 <StyledHeaderBottomSection>
-                    <Link to="/home"><Logo /></Link>
+                    <div></div>
                     <NavProducts />
                     <NavUser />
                 </StyledHeaderBottomSection>

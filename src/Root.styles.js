@@ -13,6 +13,8 @@ export const GlobalRootStyles = createGlobalStyle`
 
     --max-width: 1440px;
     
+    --logo-font-size: 40px;
+    
     --padding-top: 25vh;
     
     --product-img-width: 10vw;
@@ -34,6 +36,8 @@ export const GlobalRootStyles = createGlobalStyle`
     :root {
       
       --max-width: 270px;
+
+      --padding-top: 5vh;
       
       --product-img-width: 30vw;
       --product-img-padding-right: 0em;
