@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalRootStyles = createGlobalStyle`
   :root {
+    --color-default: white;
     --color-primary: #103a43;
     --color-primary-hover: #1f6b7c;
     --color-primary-active: #424206;
@@ -13,7 +14,18 @@ export const GlobalRootStyles = createGlobalStyle`
 
     --max-width: 1440px;
     
+    --user-icon-cart-width: 25pt;
+    --user-icon-cart-height: var(--user-icon-cart-width);
+    --user-icon-login-width: 17pt;
+    --user-icon-login-height: var(--user-icon-cart-width);
+    --user-icon-color: var(--color-primary);
+    
     --logo-font-size: 40px;
+    --color-logo: var(--color-primary);
+    
+    --nav-product-direction: row;
+    --nav-product-btn-font-size: 16px;
+    --nav-product-btn-height: auto;
     
     --padding-top: 25vh;
     
@@ -37,6 +49,19 @@ export const GlobalRootStyles = createGlobalStyle`
       
       --max-width: 270px;
 
+      --user-icon-cart-width: 16pt;
+      --user-icon-login-width: 9pt;
+      --user-icon-color: var(--color-default);
+
+      --first-header-height: 4vh;
+      
+      --logo-font-size: 25px;
+      --color-logo: var(--color-primary);
+
+      --nav-product-direction: column;
+      --nav-product-btn-font-size: 24px;
+      --nav-product-btn-height: 30px;
+      
       --padding-top: 5vh;
       
       --product-img-width: 30vw;

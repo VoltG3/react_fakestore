@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledProductContainer = styled.div`
   display: flex;
@@ -97,6 +97,3 @@ export const StyledProductContainerInner = styled.div`
     
   }
 `
-
-
-

@@ -2,12 +2,9 @@ import {
     StyledHeaderContainer,
     StyledHeaderTopSection,
     StyledHeaderBottomSection } from "./Header.style.js"
-import NavProducts from "./groups/NavProducts.js"
-import NavUser from "./groups/NavUser.js"
-import NavUserMobile from "./groups/NavUserMobile.js";
-import { NavDropDown } from "./groups/NavDropDown.js";
-import Logo from "./groups/components/Logo.js"
-import { Link } from "react-router-dom"
+import NavProductsDesktop from './groups/NavProductsDesktop.js'
+import NavUser from './groups/NavUser.js'
+import { NavProductsMobile } from './groups/NavProductsMobile.js'
 
 export default function Header() {
     return (
@@ -17,15 +14,15 @@ export default function Header() {
 
                 <StyledHeaderBottomSection>
                     <div></div>
-                    <NavProducts />
+                    <NavProductsDesktop />
                     <NavUser />
                 </StyledHeaderBottomSection>
             </div>
 
             <div className={"mobile"}>
                 <StyledHeaderTopSection>
-                    <NavDropDown />
-                    <NavUserMobile />
+                    <NavProductsMobile />
+                    <NavUser />
                 </StyledHeaderTopSection>
 
                 <StyledHeaderBottomSection />
@@ -33,4 +30,3 @@ export default function Header() {
         </StyledHeaderContainer>
     )
 }
-

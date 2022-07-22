@@ -1,9 +1,9 @@
-import ProductItem from "./components/ListProductsItem.js"
-import { Rate } from "../../utils/JsonRate.js"
-import { Count } from "../../utils/JsonCount.js"
-import data from "../../data.js"
+import ProductItem from './components/ProductsItem.js'
+import { Rate } from '../../utils/JsonRate.js'
+import { Count } from '../../utils/JsonCount.js'
+import data from '../../data.js'
 
-export default function ListProducts() {
+export default function ProductsList() {
     const productItem = data.map(item => {
 
         return (
@@ -25,4 +25,3 @@ export default function ListProducts() {
         </>
     )
 }
-

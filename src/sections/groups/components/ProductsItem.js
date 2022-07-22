@@ -1,7 +1,7 @@
 import StarRating from 'react-svg-star-rating'
 import {
     StyledProductContainer,
-    StyledProductContainerInner } from "./ListProductsItem.style.js";
+    StyledProductContainerInner } from './ProductsItem.style.js'
 
 export default function Product(props) {
 const RatingStars = () => {
@@ -14,7 +14,7 @@ const RatingStars = () => {
             unit="float"
             initialRating={props.rate}
         />
-    );
+    )
 }
 
     return (
