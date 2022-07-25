@@ -4,6 +4,7 @@ import {
     StyledProductContainerInner } from './ProductsItem.style.js'
 
 export default function Product(props) {
+
 const RatingStars = () => {
 
     return (

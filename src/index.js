@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
+import * as redux from 'redux'
 import {
     BrowserRouter,
     Routes,
@@ -12,17 +14,38 @@ import Cart from "./routes/cart.js";
 import LogIn from "./routes/login.js";
 import Empty from "./routes/empty.js"
 
+const defaultState = {
+    targetProductCategory : "All products"
+}
+
+const reducer = (state = defaultState, action) => {
+    switch (action.type) {
+        case "TARGET_PRODUCT_CATEGORY_BUTTON":
+            return {...state, targetProductCategory: state.targetProductCategory = action.payload}
+
+        default:
+            return state
+    }
+}
+
+const store = redux.createStore(reducer)
+      store.subscribe(() => {
+
+})
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-    <BrowserRouter>
-        <Routes>
-            <Route exact path="/" element={<App />} >
-                <Route path="home" element={<Home />} />
-                <Route path="products" element={<Products />} />
-                <Route path="cart" element={<Cart />} />
-                <Route path="login" element={<LogIn />} />
-                <Route path="*" element={<Empty />} />
-            </Route>
-        </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter>
+            <Routes>
+                <Route exact path="/" element={<App />} >
+                    <Route path="home" element={<Home />} />
+                    <Route path="products" element={<Products />} />
+                    <Route path="cart" element={<Cart />} />
+                    <Route path="login" element={<LogIn />} />
+                    <Route path="*" element={<Empty />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    </Provider>
 )

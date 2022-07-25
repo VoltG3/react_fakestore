@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux"
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -17,9 +18,20 @@ const StyledNavigationButton = styled.div`
   }
 `
 
+window.ButtonTargetCategory = ""
 export default function ProductsButton({buttonLabel}) {
+    const dispatch = useDispatch()
+
+    const TARGET_PRODUCT_CATEGORY_BUTTON = () => {
+        dispatch({
+            type:"TARGET_PRODUCT_CATEGORY_BUTTON",
+            payload: buttonLabel
+        })
+    }
+
     return (
-        <StyledNavigationButton>
+        <StyledNavigationButton
+            onClick={() => TARGET_PRODUCT_CATEGORY_BUTTON(buttonLabel)}>
             <Link
                 style={{color: 'var(--color-primary)'}}
                 to="/products">
