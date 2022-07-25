@@ -8,6 +8,17 @@ export default function ProductsList() {
     const targetProductCategory = useSelector(state => state.targetProductCategory)
     console.log(targetProductCategory.toLowerCase())
 
+    async function getProductsRemoteOrLocal() {
+        fetch('https://fakestoreapi.com/products')
+            .then((response) => {
+                // console.log('resolved', response)
+                return response.json()
+            }).then(dataRemote => {
+            console.log(dataRemote)
+            //console.table(dataRemote)
+        }).catch(err => console.log('reject', err))
+    }; console.log(getProductsRemoteOrLocal())
+
     const productItem = data.map(item => {
         if(item.category === targetProductCategory.toLowerCase()){
             return (
