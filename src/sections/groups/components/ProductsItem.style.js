@@ -13,21 +13,22 @@ export const StyledProductContainer = styled.div`
 
 export const StyledProductContainerInner = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto auto auto auto auto;
   gap: 1em;
-    "img title title title"
-    "img texts texts texts"
-    "img stars   .     .  "
-    "img rates   .   price"
-    "img rates   .   price";
+    "img title title title count"
+    "img texts texts texts count"
+    "img stars   .     .   count"
+    "img rates   .   price   .  "
+    "img rates   .   price   .  ";
   
   div:nth-child(1) { grid-row: 1 / 5; grid-column: 1 / 1;}  // image
-  div:nth-child(2) { grid-row: 1 / 1; grid-column: 2 / 5;}  // title
-  div:nth-child(3) { grid-row: 2 / 2; grid-column: 2 / 5;}  // texts
-  div:nth-child(4) { grid-row: 4 / 5; grid-column: 2 / 2;}  // rates
-  div:nth-child(5) { grid-row: 4 / 5; grid-column: 4 / 4;}  // price
+  div:nth-child(2) { grid-row: 1 / 1; grid-column: 2 / 4;}  // title
+  div:nth-child(3) { grid-row: 2 / 2; grid-column: 2 / 4;}  // texts
+  div:nth-child(4) { grid-row: 4 / 4; grid-column: 2 / 2;}  // rates
+  div:nth-child(5) { grid-row: 4 / 4; grid-column: 4 / 4;}  // price
   div:nth-child(6) { grid-row: 3 / 3; grid-column: 2 / 2;}  // stars
+  div:nth-child(7) { grid-row: 1 / 3; grid-column: 5 / 5;}  // count
   
   @media only screen and (max-width: 320px) {
     grid-template-columns: auto auto;
@@ -95,5 +96,11 @@ export const StyledProductContainerInner = styled.div`
   // stars
   div:nth-child(6) {
     
+  }
+  
+  // count
+  div:nth-child(7) {
+    display: flex;
+    flex-direction: column;
   }
 `

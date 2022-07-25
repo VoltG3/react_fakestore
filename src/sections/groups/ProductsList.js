@@ -9,7 +9,6 @@ export default function ProductsList() {
     console.log(targetProductCategory.toLowerCase())
 
     const productItem = data.map(item => {
-
         if(item.category === targetProductCategory.toLowerCase()){
             return (
                 <ProductItem

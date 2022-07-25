@@ -15,13 +15,23 @@ import LogIn from "./routes/login.js";
 import Empty from "./routes/empty.js"
 
 const defaultState = {
-    targetProductCategory : "All products"
+    targetProductCategory : "All products",
+    countOfProduct : 0
 }
 
 const reducer = (state = defaultState, action) => {
     switch (action.type) {
         case "TARGET_PRODUCT_CATEGORY_BUTTON":
             return {...state, targetProductCategory: state.targetProductCategory = action.payload}
+
+        case "INCREMENT_PRODUCT_COUNT":
+            return {...state, countOfProduct: state.countOfProduct + 1}
+
+        case "DECREMENT_PRODUCT_COUNT":
+            return {...state, countOfProduct: state.countOfProduct - 1}
+
+        case "NULL_PRODUCT_COUNT":
+            return {...state, countOfProduct: state.countOfProduct = 0}
 
         default:
             return state
