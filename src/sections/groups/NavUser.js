@@ -16,6 +16,11 @@ const StyledSvg = styled.div`
 export default function NavUser() {
     return (
         <StyledSvg>
+            <div>
+                <Link to="temp">
+                    <p>TEMP</p>
+                </Link>
+            </div>
             <Link to="/cart">
                 <Cart
                     width="var(--user-icon-cart-width)"
