@@ -1,7 +1,7 @@
 import {
     StyledMessageContainer,
     StyledMessageRed,
-    StyledPageContainer} from "./routes.style.js"
+    StyledPageContainer} from "./_.style.js"
 
 export default function Empty() {
     return (

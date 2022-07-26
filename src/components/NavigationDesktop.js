@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import ProductsButton from './components/ProductsButton.js'
-import { categoryList } from '../../utils/JsonCategoryList.js'
+import NavBtnProduct from './NavBtnProduct.js'
+import { categoryList } from '../utils/JsonCategoryList.js'
 import { useGetUniqueKey } from 'react-generate-unique-key-for-map'
-import Logo from './components/Logo.js'
+import Logo from './svg/Logo.js'
 import { Link } from 'react-router-dom'
 
 const StyledNavigationContainer = styled.div`
@@ -26,12 +26,16 @@ const StyledNavigationBottomSection = styled.div`
   padding: 20px 0 20px 0;
 `
 
-export default function NavProductsDesktop() {
+export default function NavigationDesktop() {
     const getUniqueKey = useGetUniqueKey()
     const category = categoryList().map(item => {
 
+        /**
+         * Get unique "categories" from api as buttonLabels
+         */
+
        return (
-           <ProductsButton
+           <NavBtnProduct
                key={ getUniqueKey(categoryList()) }
                buttonLabel={ item }
            />

@@ -14,12 +14,6 @@ export const GlobalRootStyles = createGlobalStyle`
 
     --max-width: 1440px;
     
-    --user-icon-cart-width: 25pt;
-    --user-icon-cart-height: var(--user-icon-cart-width);
-    --user-icon-login-width: 17pt;
-    --user-icon-login-height: var(--user-icon-cart-width);
-    --user-icon-color: var(--color-primary);
-    
     --logo-font-size: 40px;
     --color-logo: var(--color-primary);
     
@@ -40,19 +34,12 @@ export const GlobalRootStyles = createGlobalStyle`
   }
   
   a { text-decoration: none; }
-
-  .desktop { display: block; }
-  .mobile { display: none; }
   
   @media only screen and (max-width: 320px) {
     :root {
       
       --max-width: 270px;
-
-      --user-icon-cart-width: 16pt;
-      --user-icon-login-width: 9pt;
-      --user-icon-color: var(--color-default);
-
+      
       --first-header-height: 4vh;
       
       --logo-font-size: 25px;
@@ -71,8 +58,5 @@ export const GlobalRootStyles = createGlobalStyle`
       --product-fontsize-ratingcount: 12px;
       --product-fontsize-price: 18px;
     }
-    
-    .desktop { display: none; }
-    .mobile { display: block; }
   }
 `

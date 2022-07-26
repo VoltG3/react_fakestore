@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
-import styled from "styled-components"
-import { GlobalRootStyles } from "./Root.styles.js"
-import Header from "./sections/Header.js"
-import Footer from "./sections/Footer.js"
+import styled from 'styled-components'
+import { GlobalRootStyles } from './root.styles.js'
+import { Outlet } from 'react-router-dom'
+import SectionHeader from './components/SectionHeader.js'
+import SectionFooter from './components/SectionFooter.js'
 
 const StyledAppContainer = styled.div`
   display: flex;
@@ -15,9 +15,9 @@ export default function App() {
     return (
         <StyledAppContainer>
             <GlobalRootStyles />
-                <Header />
+                <SectionHeader />
                 <Outlet />
-                <Footer />
+                <SectionFooter />
         </StyledAppContainer>
     )
 }

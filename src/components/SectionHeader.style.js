@@ -12,6 +12,14 @@ export const StyledHeaderContainer = styled.div`
   ".";
   color: var(--color-primary);
   padding-bottom: 1em;
+
+  .desktop { display: block; }
+  .mobile { display: none; }
+
+  @media only screen and (max-width: 320px) {
+    .desktop { display: none; }
+    .mobile { display: block; }
+  }
 `
 
 export const StyledHeaderTopSection = styled.div`

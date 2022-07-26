@@ -1,4 +1,4 @@
-import data from "./local.api/data.js"
+import data from "./data/data.js"
 
 export const categoryList = () => {
     let tmp = JSON.stringify(data, ["category"])

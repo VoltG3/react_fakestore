@@ -1,12 +1,14 @@
 import {
     StyledHeaderContainer,
     StyledHeaderTopSection,
-    StyledHeaderBottomSection } from "./Header.style.js"
-import NavProductsDesktop from './groups/NavProductsDesktop.js'
-import NavUser from './groups/NavUser.js'
-import { NavProductsMobile } from './groups/NavProductsMobile.js'
+    StyledHeaderBottomSection } from "./SectionHeader.style.js"
 
-export default function Header() {
+import NavBtnCartUser from './NavBtnCartUser.js'
+import NavigationDesktop from './NavigationDesktop.js'
+import { NavigationMobile } from './NavigationMobile.js'
+
+export default function SectionHeader() {
+
     return (
         <StyledHeaderContainer>
             <div className={"desktop"}>
@@ -14,15 +16,15 @@ export default function Header() {
 
                 <StyledHeaderBottomSection>
                     <div></div>
-                    <NavProductsDesktop />
-                    <NavUser />
+                    <NavigationDesktop />
+                    <NavBtnCartUser />
                 </StyledHeaderBottomSection>
             </div>
 
             <div className={"mobile"}>
                 <StyledHeaderTopSection>
-                    <NavProductsMobile />
-                    <NavUser />
+                    <NavigationMobile />
+                    <NavBtnCartUser />
                 </StyledHeaderTopSection>
 
                 <StyledHeaderBottomSection />

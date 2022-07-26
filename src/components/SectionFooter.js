@@ -17,7 +17,7 @@ const StyledFooterContainer = styled.div`
   }
 `
 
-export default function Footer() {
+export default function SectionFooter() {
     return (
         <StyledFooterContainer>
             <p>Coded by

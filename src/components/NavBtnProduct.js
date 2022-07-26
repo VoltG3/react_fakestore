@@ -1,6 +1,6 @@
-import { useDispatch } from "react-redux"
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const StyledNavigationButton = styled.div`
   font-family: var(--font-primary);
@@ -19,7 +19,7 @@ const StyledNavigationButton = styled.div`
 `
 
 window.ButtonTargetCategory = ""
-export default function ProductsButton({buttonLabel}) {
+export default function NavBtnProduct({buttonLabel}) {
     const dispatch = useDispatch()
 
     const TARGET_PRODUCT_CATEGORY_BUTTON = () => {

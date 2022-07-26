@@ -1,7 +1,7 @@
 import {
     StyledMessageContainer,
     StyledMessageGreen,
-    StyledPageContainer} from "./routes.style.js"
+    StyledPageContainer} from "./_.style.js"
 
 export default function Cart() {
     return (

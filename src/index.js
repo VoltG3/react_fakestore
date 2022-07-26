@@ -2,19 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import * as redux from 'redux'
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import App from './App.js'
 import Home from './routes/home.js'
-import Products from "./routes/products.js";
-import Cart from "./routes/cart.js";
-import LogIn from "./routes/login.js";
-import Empty from "./routes/empty.js"
-import Temp from "./routes/temp.js"
-import Temporary from "./routes/temporary.js"
+import Products from './routes/products.js'
+import Cart from './routes/cart.js'
+import LogIn from './routes/login.js'
+import Empty from './routes/empty.js'
 
 const defaultState = {
     targetProductCategory : "All products",
@@ -56,8 +51,6 @@ root.render(
                     <Route path="cart" element={<Cart />} />
                     <Route path="login" element={<LogIn />} />
                     <Route path="*" element={<Empty />} />
-                    <Route path="temp" element={<Temp />} />
-                    <Route path="temporary" element={<Temporary />} />
                 </Route>
             </Routes>
         </BrowserRouter>
