@@ -1,26 +1,39 @@
-import { useSelector } from "react-redux"
 import ProductItem from './components/ProductsItem.js'
+import { useSelector } from "react-redux"
 import { Rate } from '../../utils/JsonRate.js'
 import { Count } from '../../utils/JsonCount.js'
-import data from '../../data.js'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import data from '../../utils/local.api/data.js'
 
 export default function ProductsList() {
     const targetProductCategory = useSelector(state => state.targetProductCategory)
     console.log(targetProductCategory.toLowerCase())
 
-    async function getProductsRemoteOrLocal() {
-        fetch('https://fakestoreapi.com/products')
-            .then((response) => {
-                // console.log('resolved', response)
-                return response.json()
-            }).then(dataRemote => {
-            console.log(dataRemote)
-            //console.table(dataRemote)
-        }).catch(err => console.log('reject', err))
-    }; console.log(getProductsRemoteOrLocal())
+    const [products, setProducts] = useState([]);
 
-    const productItem = data.map(item => {
-        if(item.category === targetProductCategory.toLowerCase()){
+    useEffect(() => {
+        fetchProducts()
+    }, [])
+
+    const fetchProducts = () => {
+        axios
+            .get('https://fakestoreapi.com/products')
+            .then((result) => {
+                console.log(result)
+                setProducts(result.data)
+            })
+            .catch((err) => {
+                console.log(err)
+                console.warn("load local api [ data.js ]")
+                setProducts(data)
+            })
+    }
+
+    const productItem = products.map(item => {
+
+        if(item.category === targetProductCategory.toLowerCase()
+            || targetProductCategory === 'All products'){
             return (
                 <ProductItem
                     key = { item.id }
@@ -32,18 +45,7 @@ export default function ProductsList() {
                     count = { item.count = Count(item.rating)}
                 />
             )
-        } else if(targetProductCategory === 'All products'){
-            return (
-                <ProductItem
-                    key = { item.id }
-                    image = { item.image }
-                    title = { item.title }
-                    description = { item.description }
-                    price = { item.price }
-                    rate = {item.rate = Rate(item.rating) }
-                    count = { item.count = Count(item.rating)}
-                />
-            )
+
         } else {
             return null
         }

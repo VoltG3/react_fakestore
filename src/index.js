@@ -14,6 +14,7 @@ import Cart from "./routes/cart.js";
 import LogIn from "./routes/login.js";
 import Empty from "./routes/empty.js"
 import Temp from "./routes/temp.js"
+import Temporary from "./routes/temporary.js"
 
 const defaultState = {
     targetProductCategory : "All products",
@@ -56,6 +57,7 @@ root.render(
                     <Route path="login" element={<LogIn />} />
                     <Route path="*" element={<Empty />} />
                     <Route path="temp" element={<Temp />} />
+                    <Route path="temporary" element={<Temporary />} />
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -17,6 +17,9 @@ export default function NavUser() {
     return (
         <StyledSvg>
             <div>
+                <Link to="temporary">
+                    <p>TEMPORARY</p>
+                </Link>
                 <Link to="temp">
                     <p>TEMP</p>
                 </Link>
