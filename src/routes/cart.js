@@ -3,13 +3,13 @@ import {
     StyledMessageGreen,
     StyledPageContainer} from "./_.style.js"
 
-import Temp from "../components/Temp.js"
+import Temp2 from "../components/Temp2.js"
 
 export default function Cart() {
     return (
         <StyledPageContainer>
             <p>Cart</p>
-            <Temp />
+            <Temp2 />
         </StyledPageContainer>
     )
 }
