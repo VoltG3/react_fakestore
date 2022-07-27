@@ -37,6 +37,12 @@ export default function Temp() {
           isImportant2 === "Yes2" ?  setIsIportant("No2") : setIsIportant("Yes2")
         }
 
+    //cout arr 4
+        const[isGoingOut, setIsGoingOut] = React.useState(true)
+        function changeMind() {
+            setIsGoingOut(prevState => !prevState)
+        }
+
     const thingElements = things.map(thing => <p key={thing}>{thing}</p>)
 
     return (
@@ -44,6 +50,11 @@ export default function Temp() {
             <button onClick={addItems}>Add ProductId</button>
             <button onClick={removeItems}>Remove ProductId</button>
             <button onClick={ handleClick }>setImportant</button>
+
+            <div onClick={ changeMind }>
+                <h1>{isGoingOut ? "Yes" : "No"}</h1>
+            </div>
+
                 { thingElements }
                 { isImportant }
                 { isImportant2 }
