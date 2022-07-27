@@ -1,19 +1,21 @@
+import React from 'react'
 
 export default function Temp() {
+    const [things, setThings] = React.useState(["ProductId"])
 
-    const productId = ["ProductId"]
-    const thingElements = productId.map(thing => <p key={thing}>{thing}</p>)
 
     function addItems() {
-        const newProductId = `ProductId ${productId.length - 1}`
-        productId.push(newProductId)
-        console.log(productId)
+        const newProductId = `ProductId ${things.length + 1}`
+        setThings(prevState => [...prevState, newProductId])
+        console.log(things)
     }
 
-    function removeItems() {
-        productId.splice(-1)
-        console.log(productId)
+    function removeItems() { // err
+        things.splice(-1)
+        console.log(things)
     }
+
+    const thingElements = things.map(thing => <p key={thing}>{thing}</p>)
 
     return (
         <div>
