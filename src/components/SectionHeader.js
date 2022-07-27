@@ -10,6 +10,12 @@ import { NavigationMobile } from './NavigationMobile.js'
 export default function SectionHeader() {
 
     return (
+
+        /**
+         * desktop - default width=1440px
+         * mobile - @media max-width=320px
+         */
+
         <StyledHeaderContainer>
             <div className={"desktop"}>
                 <StyledHeaderTopSection />
