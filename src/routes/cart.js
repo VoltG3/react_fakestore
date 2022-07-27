@@ -3,13 +3,13 @@ import {
     StyledMessageGreen,
     StyledPageContainer} from "./_.style.js"
 
-import PassingStateAsProps from "../components/PassingStateAsProps.js"
+import SettingStateFromChild from "../components/SettingStateFromChild";
 
 export default function Cart() {
     return (
         <StyledPageContainer>
             <p>Cart</p>
-            <PassingStateAsProps />
+            <SettingStateFromChild />
         </StyledPageContainer>
     )
 }
