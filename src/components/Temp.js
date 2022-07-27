@@ -15,13 +15,38 @@ export default function Temp() {
         console.log(things)
     }
 
+    // cout arr 1
+        const result = ["first", "second", "third"]
+        const getItemById = () => {
+            for(let i = 0; i < result.length; i++) {
+                if(i === 2) {
+                    console.log("result[", i, "]", result[i])
+                }
+            }
+        }; getItemById()
+
+    //cout arr 2
+        const [isImportant, func] = React.useState("Yes")
+        console.log(isImportant)
+
+    //cout arr 3
+        const [isImportant2, setIsIportant] = React.useState("Yes2")
+        console.log(isImportant2)
+
+        function handleClick() {
+          isImportant2 === "Yes2" ?  setIsIportant("No2") : setIsIportant("Yes2")
+        }
+
     const thingElements = things.map(thing => <p key={thing}>{thing}</p>)
 
     return (
         <div>
             <button onClick={addItems}>Add ProductId</button>
             <button onClick={removeItems}>Remove ProductId</button>
-            { thingElements }
+            <button onClick={ handleClick }>setImportant</button>
+                { thingElements }
+                { isImportant }
+                { isImportant2 }
         </div>
     )
 }
