@@ -1,8 +1,10 @@
-import StarRating from 'react-svg-star-rating'
+import React from 'react'
 import {
     StyledProductContainer,
     StyledProductContainerInner } from './Product.style.js'
-import NavBtnCounter from './NavBtnCounter.js'
+
+import StarRating from 'react-svg-star-rating'
+import NavBtnAddToCart from './NavBtnAddToCart.js'
 
 export default function Product(props) {
 
@@ -57,7 +59,11 @@ const RatingStars = () => {
                     <RatingStars />
                 </div>
 
-                <NavBtnCounter />
+                {/*<NavBtnCounter />*/}
+
+                <div>
+                    <NavBtnAddToCart />
+                </div>
 
             </StyledProductContainerInner>
         </StyledProductContainer>

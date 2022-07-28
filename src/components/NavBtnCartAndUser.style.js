@@ -35,3 +35,14 @@ export const StyledIconContainer = styled.div`
     }
 `
 
+export const StyledIconTotalCount = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    width: 25px;
+    height: 25px;
+  border-radius: 50%;
+  background-color: brown;
+  color: white;
+`
+

@@ -3,7 +3,7 @@ import {
     StyledHeaderTopSection,
     StyledHeaderBottomSection } from "./SectionHeader.style.js"
 
-import NavBtnCartUser from './NavBtnCartUser.js'
+import NavBtnCartAndUser from './NavBtnCartAndUser.js'
 import NavigationDesktop from './NavigationDesktop.js'
 import { NavigationMobile } from './NavigationMobile.js'
 
@@ -23,14 +23,14 @@ export default function SectionHeader() {
                 <StyledHeaderBottomSection>
                     <div></div>
                     <NavigationDesktop />
-                    <NavBtnCartUser />
+                    <NavBtnCartAndUser />
                 </StyledHeaderBottomSection>
             </div>
 
             <div className={"mobile"}>
                 <StyledHeaderTopSection>
                     <NavigationMobile />
-                    <NavBtnCartUser />
+                    <NavBtnCartAndUser />
                 </StyledHeaderTopSection>
 
                 <StyledHeaderBottomSection />

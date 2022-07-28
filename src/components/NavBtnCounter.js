@@ -24,7 +24,6 @@ export default function NavBtnCounter() {
     const INCREMENT_PRODUCT_COUNT = () => {
         dispatch({
             type: "INCREMENT_PRODUCT_COUNT"
-
         })
     }
 
