@@ -14,7 +14,8 @@ import Empty from './routes/empty.js'
 const defaultState = {
     targetProductCategory : "All products",
     countOfProduct : 0,
-    productsTotalCount : 0
+    productsTotalCount : 0,
+    choisedProductsIdsArray : []
 }
 
 const reducer = (state = defaultState, action) => {
@@ -36,6 +37,12 @@ const reducer = (state = defaultState, action) => {
 
         case "DECREMENT_PRODUCT_TOTAL_COUNT" :
             return {...state, productsTotalCount: state.productsTotalCount - 1}
+
+        case "INCREMENT_CHOISED_PRODUCTS_IDS" :
+            return {...state,choisedProductsIdsArray: [...state.choisedProductsIdsArray, action.payload] }
+
+        case "DECREMENT_CHOISED_PRODUCTS_IDS" :
+            return {...state,choisedProductsIdsArray: state.choisedProductsIdsArray.slice(0, action.payload) }
 
         default:
             return state

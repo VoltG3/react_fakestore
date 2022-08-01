@@ -47,7 +47,7 @@ export default function Products() {
                     price = { item.price }
                     rate = {item.rate = Rate(item.rating) }
                     count = { item.count = Count(item.rating)}
-                    productId={ item.id }
+                    productID={ item.id }
                 />
             )
 
