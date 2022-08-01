@@ -14,7 +14,7 @@ const StyledButtonAddToCart = styled.div`
   }}
 `
 
-export default function NavBtnAddToCart() {
+export default function NavBtnAddToCart(props) {
     const dispatch = useDispatch()
     const INCREMENT_PRODUCT_TOTAL_COUNT = () => { dispatch({ type: "INCREMENT_PRODUCT_TOTAL_COUNT" })}
     const DECREMENT_PRODUCT_TOTAL_COUNT = () => { dispatch({ type: "DECREMENT_PRODUCT_TOTAL_COUNT" })}
@@ -22,7 +22,9 @@ export default function NavBtnAddToCart() {
     const [item, setItem] = React.useState({
         isActiv : true
     })
-
+    console.log("-----")
+    const x = props.value
+    console.log(x)
     function toggleIsActiv() {
         setItem( prevItem => ({
             ...prevItem,

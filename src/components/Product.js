@@ -62,7 +62,7 @@ const RatingStars = () => {
                 {/*<NavBtnCounter />*/}
 
                 <div>
-                    <NavBtnAddToCart />
+                    <NavBtnAddToCart value={ props.productId }/>
                 </div>
 
             </StyledProductContainerInner>

@@ -53,7 +53,7 @@ $ ls -a
 ## Dependencies
 ---
 ```
-$ yarn add styled-components  
+$ yarn add styled-components
 $ yarn add get-unique-key
 $ yarn add react-svg-star-rating
 $ yarn add react-router-dom@6
@@ -64,5 +64,21 @@ $ yarn add react-use-global
 $ yarn add react-redux  
 $ yarn add redux  
 $ yarn add redux-resource
+```
+
+- [styled-components](https://www.npmjs.com/package/styled-components)
+- [get-unique-key]
+- [react-svg-star-rating](https://www.npmjs.com/package/react-svg-star-rating)
+- [react-router-dom@6](https://www.npmjs.com/package/react-router-dom)
+- [react-sliding-pane](https://www.npmjs.com/package/react-sliding-pane)
+- [axios](https://www.npmjs.com/package/axios))
+- [react-use-global](https://www.npmjs.com/package/react-use-global)
+- [react-redux](https://www.npmjs.com/package/react-redux)
+- [redux](https://www.npmjs.com/package/redux)
+- [redux-resource](https://www.npmjs.com/package/redux-resource)
+
+##### Copy/Past in terminal
+```
+yarn add styled-components add get-unique-key add react-svg-star-rating add react-router-dom@6 add react-sliding-pane add axios add react-use-global add react-redux add redux add redux-resource
 ```
 

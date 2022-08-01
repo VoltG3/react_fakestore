@@ -1,11 +1,14 @@
-import { StyledPageContainer } from "./_.style.js"
-import Product from '../components/Product.js'
-import axios from 'axios'
+import { StyledPageContainer } from './_.style.js'
+
 import React, { useState, useEffect } from 'react'
-import { useSelector } from "react-redux"
+import { useSelector } from 'react-redux'
+import axios from 'axios'
+
+import { API_REMOTE, API_LOCAL } from '../env.js'
+import Product from '../components/Product.js'
 import { Rate } from '../utils/JsonRate.js'
 import { Count } from '../utils/JsonCount.js'
-import data from '../utils/data/data.js'
+
 
 export default function Products() {
     const targetProductCategory = useSelector(state => state.targetProductCategory)
@@ -19,7 +22,7 @@ export default function Products() {
 
     const fetchProducts = () => {
         axios
-            .get('https://fakestoreapi.com/products')
+            .get(API_REMOTE)
             .then((result) => {
                 console.log(result)
                 setProducts(result.data)
@@ -27,7 +30,7 @@ export default function Products() {
             .catch((err) => {
                 console.log(err)
                 console.warn("load local api [ data.js ]")
-                setProducts(data)
+                setProducts(API_LOCAL)
             })
     }
 
@@ -44,6 +47,7 @@ export default function Products() {
                     price = { item.price }
                     rate = {item.rate = Rate(item.rating) }
                     count = { item.count = Count(item.rating)}
+                    productId={ item.id }
                 />
             )
 
