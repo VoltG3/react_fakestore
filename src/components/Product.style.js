@@ -17,8 +17,7 @@ export const StyledProductContainerInner = styled.div`
   grid-template-rows: auto auto auto auto auto;
   gap: 1em;
     "img title title title count"
-    "img texts texts texts count"
-    "img stars   .     .   count"
+    "img texts tejs.     .   count"
     "img rates   .   price   .  "
     "img rates   .   price   .  ";
   

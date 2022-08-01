@@ -4,6 +4,8 @@ import {
     StyledMessageGreen,
     StyledPageContainer} from "./_.style.js"
 
+import DataFetcher from "../DataFetcher.js";
+
 import Temp from "../components/Temp.js"
 import Temp2 from "../components/Temp.js"
 import Temp3 from "../components/Temp.js"
@@ -16,6 +18,20 @@ const StyledH = styled.h1`
 `
 
 export default function Cart() {
+
+    function getData() {
+
+        return(
+            <DataFetcher url='https://fakestoreapi.com/products'>
+                {({ data, loading }) => (
+                    loading ?
+                    <h1>Loading...</h1> :
+                        <p>{JSON.stringify(data)}</p>
+                )}
+            </DataFetcher>
+        )
+    }
+
     return (
         <StyledPageContainer>
             <StyledH>Temp: array: useState: changingState: flipping state</StyledH>
@@ -32,6 +48,14 @@ export default function Cart() {
 
             <StyledH>SettingStateFromChild</StyledH>
             <SettingStateFromChild />
+
+            <DataFetcher url='https://fakestoreapi.com/products'>
+                {({ data, loading }) => (
+                    loading ?
+                        <h1>Loading...</h1> :
+                        <p>{JSON.stringify(data)}</p>
+                )}
+            </DataFetcher>
         </StyledPageContainer>
     )
 }
