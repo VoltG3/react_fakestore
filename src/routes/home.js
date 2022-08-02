@@ -1,7 +1,7 @@
 import {
     StyledMessageContainer,
     StyledMessageGreen,
-    StyledPageContainer} from "./_.style.js"
+    StyledPageContainer }  from '../styles/routes.mutual.style.js'
 
 export default function Home() {
     return (

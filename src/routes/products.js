@@ -1,4 +1,4 @@
-import { StyledPageContainer } from './_.style.js'
+import { StyledPageContainer } from '../styles/routes.mutual.style.js'
 
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'

@@ -1,7 +1,7 @@
 import {
     StyledPageContainer,
     StyledMessageContainer,
-    StyledMessageGreen } from "./_.style.js"
+    StyledMessageGreen }  from '../styles/routes.mutual.style.js'
 
 export default function Login() {
     return (

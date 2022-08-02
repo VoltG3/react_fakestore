@@ -1,20 +1,8 @@
-import styled from 'styled-components'
+import { StyledProductCounter } from '../styles/component.BtnCounter.style.js'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 
-const StyledProductCounter = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 40px;
-      width: 40px;
-      height: 40px;
-    background-color: aliceblue;
-    cursor: pointer;
-`
-
-export default function NavBtnCounter() {
+export default function BtnCounter() {
     const dispatch = useDispatch()
 
     const PRODUCTS_COUNT = useSelector(

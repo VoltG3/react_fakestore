@@ -1,10 +1,10 @@
-import { StyledIconContainer, StyledIconTotalCount } from './NavBtnCartAndUser.style'
-import { ReactComponent as Cart } from './svg/cart.svg'
-import { ReactComponent as Login } from './svg/login.svg'
+import { StyledIconContainer, StyledIconTotalCount } from '../styles/navigation.BtnCartAndUser.style'
+import { ReactComponent as Cart } from '../components/svg/cart.svg'
+import { ReactComponent as Login } from '../components/svg/login.svg'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-export default function NavBtnCartAndUser() {
+export default function NavigationCartAndUser(props) {
     const DISPLAY_PRODUCT_TOTAL_COUNT = useSelector(state => state.productsTotalCount)
 
     return (
@@ -19,6 +19,10 @@ export default function NavBtnCartAndUser() {
 
             <Link to="/login">
                 <Login className="iconLogin"/>
+            </Link>
+
+            <Link to="/temporary">
+                <p style={{color: `blue`}}>T</p>
             </Link>
         </StyledIconContainer>
     )

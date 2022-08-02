@@ -3,19 +3,19 @@ import styled from 'styled-components'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 
-const StyledButtonAddToCart = styled.div`
-  background-color: ${({isTrue}) => {
+const StyledBtnAddToCart = styled.div`
+  background-color: ${({ isTrue }) => {
     if (isTrue === false)  return 'green;'
     else return 'lightgrey;'
   }}
   
-  color:  ${({isTrue}) => {
+  color:  ${({ isTrue }) => {
     if (isTrue === false)  return 'white;'
     else return 'black;'
   }}
 `
 
-export default function NavBtnAddToCart(props) {
+export default function BtnAddToCart(props) {
 
     const thisProductID = props.thisProductID
 
@@ -23,9 +23,11 @@ export default function NavBtnAddToCart(props) {
     const INCREMENT_PRODUCT_TOTAL_COUNT = () => { dispatch({ type: "INCREMENT_PRODUCT_TOTAL_COUNT" })}
     const DECREMENT_PRODUCT_TOTAL_COUNT = () => { dispatch({ type: "DECREMENT_PRODUCT_TOTAL_COUNT" })}
 
+
     const INCREMENT_CHOISED_PRODUCTS_IDS = () => { dispatch({
         type: "INCREMENT_CHOISED_PRODUCTS_IDS",
         payload: { thisProductID } })}
+
 
     const DECREMENT_CHOISED_PRODUCTS_IDS = () => { dispatch({
         type: "DECREMENT_CHOISED_PRODUCTS_IDS",
@@ -58,11 +60,11 @@ export default function NavBtnAddToCart(props) {
     }
 
     return (
-        <StyledButtonAddToCart
+        <StyledBtnAddToCart
             onClick={ toggleIsActiv }
             isTrue={ item.isActiv }
         >
             <p>Add to Cart</p>
-        </StyledButtonAddToCart>
+        </StyledBtnAddToCart>
     )
 }

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalRootStyles = createGlobalStyle`
+  
   :root {
     --color-default: white;
     --color-primary: #103a43;

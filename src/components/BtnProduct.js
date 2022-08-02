@@ -1,25 +1,9 @@
-import styled from 'styled-components'
+import { StyledBtnProduct } from '../styles/component.BtnProduct.style'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-const StyledNavigationButton = styled.div`
-  font-family: var(--font-primary);
-  font-size: var(--nav-product-btn-font-size);
-  height: var(--nav-product-btn-height);
-  
-  *:hover {
-    transition: 0.25s all ease-in-out;
-    cursor: pointer;
-    color: var(--color-primary-hover);
-  }
 
-  *:active {
-    color: var(--color-primary-active)
-  }
-`
-
-window.ButtonTargetCategory = ""
-export default function NavBtnProduct({buttonLabel}) {
+export default function BtnProduct({ buttonLabel }) {
     const dispatch = useDispatch()
 
     const TARGET_PRODUCT_CATEGORY_BUTTON = () => {
@@ -30,7 +14,7 @@ export default function NavBtnProduct({buttonLabel}) {
     }
 
     return (
-        <StyledNavigationButton
+        <StyledBtnProduct
             onClick={() => TARGET_PRODUCT_CATEGORY_BUTTON(buttonLabel)}>
             <Link
                 style={{color: 'var(--color-primary)'}}
@@ -39,6 +23,6 @@ export default function NavBtnProduct({buttonLabel}) {
                         { buttonLabel }
                     </p>
             </Link>
-        </StyledNavigationButton>
+        </StyledBtnProduct>
     )
 }

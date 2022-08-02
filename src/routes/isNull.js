@@ -1,9 +1,9 @@
 import {
     StyledMessageContainer,
     StyledMessageRed,
-    StyledPageContainer} from "./_.style.js"
+    StyledPageContainer } from '../styles/routes.mutual.style.js'
 
-export default function Empty() {
+export default function IsNull() {
     return (
         <StyledPageContainer>
             <StyledMessageContainer>

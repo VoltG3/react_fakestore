@@ -9,13 +9,15 @@ import Home from './routes/home.js'
 import Products from './routes/products.js'
 import Cart from './routes/cart.js'
 import LogIn from './routes/login.js'
-import Empty from './routes/empty.js'
+import IsNull from './routes/isNull.js'
+import Temporary from './routes/temporary.js'
 
 const defaultState = {
     targetProductCategory : "All products",
     countOfProduct : 0,
     productsTotalCount : 0,
-    choisedProductsIdsArray : []
+    choisedProductsIdsArray : [],
+    showBorders : "0"
 }
 
 const reducer = (state = defaultState, action) => {
@@ -44,6 +46,12 @@ const reducer = (state = defaultState, action) => {
         case "DECREMENT_CHOISED_PRODUCTS_IDS" :
             return {...state,choisedProductsIdsArray: state.choisedProductsIdsArray.slice(0, action.payload) }
 
+        case "INCREMENT_SHOW_BORDERS" :
+            return {...state, showBorders: state.showBorders = "1" }
+
+        case "DECREMENT_SHOW_BORDERS" :
+            return {...state, showBorders: state.showBorders = "0" }
+
         default:
             return state
     }
@@ -64,7 +72,8 @@ root.render(
                     <Route path="products" element={<Products />} />
                     <Route path="cart" element={<Cart />} />
                     <Route path="login" element={<LogIn />} />
-                    <Route path="*" element={<Empty />} />
+                    <Route path="temporary" element={<Temporary />} />
+                    <Route path="*" element={<IsNull />} />
                 </Route>
             </Routes>
         </BrowserRouter>

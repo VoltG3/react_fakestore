@@ -22,15 +22,15 @@ export const StyledHeaderContainer = styled.div`
   }
 `
 
-export const StyledHeaderTopSection = styled.div`
+export const StyledHeaderContainerTop = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 4vh;
+  height: 6vh;
   padding: 0 1em 0 1em;
   background-color: var(--color-primary);
 `
 
-export const StyledHeaderBottomSection = styled.div`
+export const StyledHeaderContainerBottom = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;

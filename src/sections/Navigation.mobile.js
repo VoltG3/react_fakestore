@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import SlidingPane from 'react-sliding-pane'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
-import {ReactComponent as MenuMobile} from './svg/menu.svg'
-import {ReactComponent as MenuClose} from './svg/close.svg'
-import Logo from './svg/Logo.js'
-import NavigationDesktop from './NavigationDesktop.js'
+import {ReactComponent as MenuMobile} from '../components/svg/menu.svg'
+import {ReactComponent as MenuClose} from '../components/svg/close.svg'
+import Logo from '../components/svg/Logo.js'
+import NavigationDesktop from './Navigation.desktop.js'
 
 export const NavigationMobile = () => {
     const [state, setState] = useState({
