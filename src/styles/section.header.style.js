@@ -35,5 +35,5 @@ export const StyledHeaderContainerBottom = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: #eeeff1;
+  background-color: var(--color-accent);
 `

@@ -11,11 +11,14 @@ const StyledAppContainer = styled.div`
     width: 100vw;
     height: 100vh;
   
-  * { 
-    border: ${({ tt }) => {
-      if(tt === "1") return 'solid'
+  body { 
+    
+  /*  border: ${({ tt }) => {
+      if(tt === 1) return 'solid'
       else return 'none'
-    }} 1px black; 
+    }} 1px black;*/
+
+  // * { border: dotted 1px lightgray; }
   }
 `
 

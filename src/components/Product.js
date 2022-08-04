@@ -14,9 +14,9 @@ const RatingStars = () => {
         <StarRating
             isReadOnly
             roundedCorner="false"
-            size="30"
+            size="20"
             unit="float"
-            initialRating={props.rate}
+            initialRating={ props.rate }
         />
     )
 }
@@ -28,17 +28,11 @@ const RatingStars = () => {
                     <img src={ props.image } alt={"img"} />
                 </div>
 
-                <div>
-                    <h2>{ props.title }</h2>
-                </div>
+                <h2>{ props.title }</h2>
+                <p>{ props.description }</p>
 
-                <div>
-                    <p>{ props.description }</p>
-                </div>
-
-                <div>
-                    <table>
-                        <tbody>
+                <table>
+                    <tbody>
                         <tr>
                             <td>Rating:</td>
                             <td>{ props.rate }</td>
@@ -47,24 +41,12 @@ const RatingStars = () => {
                             <td>Count:</td>
                             <td>{ props.count }</td>
                         </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
 
-                <div>
-                    <p>Price: { props.price }</p>
-                </div>
-
-                <div>
-                    <RatingStars />
-                </div>
-
-                {/*<NavBtnCounter />*/}
-
-                <div>
-                    <BtnAddToCart thisProductID={ props.productID }/>
-                </div>
-
+                <p>Price: { props.price }</p>
+                <RatingStars />
+                <BtnAddToCart thisProductID={ props.productID }/>
             </StyledProductContainerInner>
         </StyledProductContainer>
     )

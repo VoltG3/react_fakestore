@@ -34,16 +34,16 @@ const reducer = (state = defaultState, action) => {
         case "NULL_PRODUCT_COUNT":
             return {...state, countOfProduct: state.countOfProduct = 0}
 
-        case "INCREMENT_PRODUCT_TOTAL_COUNT" :
+        case "CART_ADD_PRODUCT_TOTAL_COUNT" :
             return {...state, productsTotalCount: state.productsTotalCount + 1}
 
-        case "DECREMENT_PRODUCT_TOTAL_COUNT" :
+        case "CART_REM_PRODUCT_TOTAL_COUNT" :
             return {...state, productsTotalCount: state.productsTotalCount - 1}
 
-        case "INCREMENT_CHOISED_PRODUCTS_IDS" :
+        case "CART_ADD_PRODUCT_ID" :
             return {...state,choisedProductsIdsArray: [...state.choisedProductsIdsArray, action.payload] }
 
-        case "DECREMENT_CHOISED_PRODUCTS_IDS" :
+        case "CART_REM_PRODUCT_ID" :
             return {...state,choisedProductsIdsArray: state.choisedProductsIdsArray.slice(0, action.payload) }
 
         case "INCREMENT_SHOW_BORDERS" :
