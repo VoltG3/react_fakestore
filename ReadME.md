@@ -1,8 +1,18 @@
 # React FakeStore
 IntelliJ IDEA / Ubuntu Linux  
-react / redux / js  
+react / redux / js / flex / grid
 api - https://fakestoreapi.com/products
 
+#### So far finished
+> From the API get unique "categorys" as navigation button label for the products  
+> Onload local copy of products list if remote connection fall
+
+<table>
+  <tr>
+    <td style ="width: 50%;" ><img src="https://github.com/VoltG3/react_fakestore/blob/master/doc/desktop01.png" alt="img"></td>
+    <td style ="width: 50%;" ><img src="https://github.com/VoltG3/react_fakestore/blob/master/doc/desktop02.png" alt="img"></td>
+  <tr>
+ </table>
 
 | Chapters                                                                |
 | :---------------------------------------------------------------------- |
@@ -35,7 +45,7 @@ $ gitk
 
 ## Create first commit as a clean template commit:
 #### Before first commit
-Exclude inetlliJ IDEA files from project 
+Exclude inetlliJ IDEA files from project
 add to .gitignore:
 ```
 .idea/*
