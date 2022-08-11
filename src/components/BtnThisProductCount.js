@@ -1,4 +1,6 @@
-import { StyledProductCounter } from '../styles/COMPONENT.BtnThisProductCount.style.js'
+import {
+    StyledProductCounter,
+    StyledProductCounterContainer } from '../styles/COMPONENT.BtnThisProductCount.style.js'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 
@@ -28,9 +30,7 @@ export default function BtnThisProductCount() {
     }
 
     return(
-        <div>
-            <StyledProductCounter />
-
+        <StyledProductCounterContainer>
             <StyledProductCounter
                 onClick={() => ADD_THIS_PRODUCT_COUNT()}
             >+</StyledProductCounter>
@@ -40,6 +40,6 @@ export default function BtnThisProductCount() {
             <StyledProductCounter
                 onClick={()=> REM_THIS_PRODUCT_COUNT()}
             >-</StyledProductCounter>
-        </div>
+        </StyledProductCounterContainer>
     )
 }

@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components'
+
+export const StyledProductCounterContainer = styled.div`
+  display: flex;
+  align-content: space-between;
+`
 
 export const StyledProductCounter = styled.div`
     display: flex;

@@ -1,7 +1,7 @@
 
 export const defaultState = {
     targetProductCategory : "All products",
-    countOfProduct : 0,
+    countOfProduct : 1,
     productsTotalCount : 0,
     arrID : [],
     temporary : 0

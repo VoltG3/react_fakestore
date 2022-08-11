@@ -1,31 +1,13 @@
-import styled from "styled-components"
 import React from 'react'
+import {
+    StyledProductInCart,
+    StyledProductInCartInner } from '../styles/COMPONENT.ProductInCart.style'
+
+import { useSelector } from 'react-redux'
 import BtnThisProductCount from './BtnThisProductCount.js'
 
-const StyledProductInCart = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    border: solid 1px black;
-
-  img {
-    width: 100px;
-    height: 100px;
-  }
-`
-
-const StyledProductInCartInner = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  
-  p {
-    padding: 0 20px 0 20px;
-  }
-`
-
 export default function ProductInCart(props) {
+    const totalItemPrice = useSelector(state => state.countOfProduct)
 
     return (
         <StyledProductInCart>
@@ -34,6 +16,7 @@ export default function ProductInCart(props) {
             <StyledProductInCartInner>
                 <p>{ props.title }</p>
                 <p>Price: { props.price }</p>
+                <p>Total: { totalItemPrice * props.price}</p>
             </StyledProductInCartInner>
 
             <BtnThisProductCount />
