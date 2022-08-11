@@ -106,9 +106,10 @@ export const StyledProductContainerInner = styled.div`
     justify-content: center;
     align-items: center;
     font-family: var(--font-primary);
+      max-width: 250px;
+      max-height: 40px;
         width: var(--btn-addToCart-width);
         height: var(--btn-addToCart-height);
     border-radius: 0.8rem;
-    
   }
 `
