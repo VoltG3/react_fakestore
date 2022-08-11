@@ -1,6 +1,5 @@
 import {
     StyledMessageContainer,
-    StyledMessageRed,
     StyledPageContainer }  from '../styles/ROUTER.mutual.style.js'
 
 import { useSelector } from 'react-redux'
@@ -9,57 +8,37 @@ import { strThisProductID } from '../utils/JSON_thisProductID.js'
 import ProductInCart from '../components/ProductInCart.js'
 
 export default function Cart() {
-    // get selected array
-    const selectedProductsIdsArray = useSelector(state => state.arrID)
+    const selectedArray = useSelector(state => state.arrID)
+    const productList = FetchData()
+    const convertedArray = []
+    const finalArray = []
 
-    // convert arr
-    const convertedProductsIdsArray = []
-    for(let i = 0; i < selectedProductsIdsArray.length; i++) {
-        convertedProductsIdsArray.push(strThisProductID(selectedProductsIdsArray[i]))
+    for(let i = 0; i < selectedArray.length; i++) {
+        convertedArray.push(strThisProductID(selectedArray[i]))
     }
 
-    // stdcout
-    for(let i = 0; i < convertedProductsIdsArray.length; i++) {
-        console.log("converted array ->", convertedProductsIdsArray[i])
-    }
-
-    // compare converted array id's with api id's
-    function compareIDs(itemId) {
-        for (let i = 0; i < convertedProductsIdsArray.length; i++) {
-            if (itemId === convertedProductsIdsArray[i]) {
-                // console.log("TARGET item.id", item.id, "convertedProductsIdsArray", convertedProductsIdsArray[i])
-                return true
-            } else {
-                return false
+    for(let y = 0; y < convertedArray.length; y++) {
+        for(let i = 0; i < productList.length; i++) {
+            if(convertedArray[y] === i+1) {
+                // console.log("-> convertesArray[y]", convertedArray[y])
+                // console.log("-> i                ", i)
+                finalArray.push(productList[i])
             }
         }
     }
 
-    const productInCart = FetchData().map(item => {
-        // ctrl
-        // for(let i = 0; i < convertedProductsIdsArray.length; i++) {
-        //     if(item.id === convertedProductsIdsArray[i]) {
-        //         console.log("TARGET item.id", item.id, "convertedProductsIdsArray", convertedProductsIdsArray[i])
-        //     }
-        // }
+    // console.table(finalArray)
 
-        if(compareIDs(item.id) === true) {
-            return (
-                <ProductInCart
-                    key = { item.id }
-                    image = { item.image }
-                    title = { item.title }
-                    price = { item.price }
-                />
-            )
-
-        } else {
-            return null
-        }
-
-        //return compareIDs(item.id) ? console.log("true") : console.log("false")
-
-    }); //console.log(product)
+    const productInCart = finalArray.map(item => {
+        return (
+            <ProductInCart
+                key = { item.id }
+                image = { item.image }
+                title = { item.title }
+                price = { item.price }
+            />
+        )
+    })
 
     return (
         <StyledPageContainer>
