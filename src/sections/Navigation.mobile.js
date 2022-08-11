@@ -3,6 +3,7 @@ import SlidingPane from 'react-sliding-pane'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
 import {ReactComponent as MenuMobile} from '../components/svg/menu.svg'
 import {ReactComponent as MenuClose} from '../components/svg/close.svg'
+
 import Logo from '../components/svg/Logo.js'
 import NavigationDesktop from './Navigation.desktop.js'
 

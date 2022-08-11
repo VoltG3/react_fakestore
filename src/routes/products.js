@@ -1,4 +1,4 @@
-import { StyledPageContainer } from '../styles/routes.mutual.style.js'
+import { StyledPageContainer } from '../styles/ROUTER.mutual.style.js'
 
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
@@ -6,8 +6,8 @@ import axios from 'axios'
 
 import { API_REMOTE, API_LOCAL } from '../env.js'
 import Product from '../components/Product.js'
-import { Rate } from '../utils/JsonRate.js'
-import { Count } from '../utils/JsonCount.js'
+import { Rate } from '../utils/JSON_rate.js'
+import { Count } from '../utils/JSON_count.js'
 
 
 export default function Products() {

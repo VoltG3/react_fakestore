@@ -1,4 +1,4 @@
-import { StyledIconContainer, StyledIconTotalCount } from '../styles/navigation.BtnCartAndUser.style'
+import { StyledIconContainer, StyledIconTotalCount } from '../styles/NAVIGATION.BtnCartAndUser.style'
 import { ReactComponent as Cart } from '../components/svg/cart.svg'
 import { ReactComponent as Login } from '../components/svg/login.svg'
 import { Link } from 'react-router-dom'
@@ -21,7 +21,7 @@ export default function NavigationCartAndUser(props) {
                 <Login className="iconLogin"/>
             </Link>
 
-            <Link to="/temporary">
+            <Link to="/temp">
                 <p style={{color: `blue`}}>T</p>
             </Link>
         </StyledIconContainer>

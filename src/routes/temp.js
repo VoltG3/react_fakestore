@@ -3,12 +3,12 @@ import {
     StyledMessageGreen,
     StyledPageContainer }  from '../styles/ROUTER.mutual.style.js'
 
-export default function Home() {
+export default function Temp() {
     return (
         <StyledPageContainer>
             <StyledMessageContainer>
                 <StyledMessageGreen>
-                    <p>Home</p>
+                    <p>Temp</p>
                 </StyledMessageGreen>
             </StyledMessageContainer>
         </StyledPageContainer>

@@ -1,4 +1,4 @@
-import { StyledFooterContainer } from '../styles/section.footer.style.js'
+import { StyledFooterContainer } from '../styles/SECTION.footer.style.js'
 
 export default function Footer() {
     return (

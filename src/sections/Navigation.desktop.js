@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import BtnProduct from '../components/BtnProduct.js'
-import { categoryList } from '../utils/JsonCategoryList.js'
+import BtnProductCategory from '../components/BtnProductCategory.js'
 import { useGetUniqueKey } from 'react-generate-unique-key-for-map'
+import { categoryList } from '../utils/JSON_categoryList.js'
 import Logo from '../components/svg/Logo.js'
 import { Link } from 'react-router-dom'
 
@@ -35,7 +35,7 @@ export default function NavigationDesktop() {
          */
 
        return (
-           <BtnProduct
+           <BtnProductCategory
                key={ getUniqueKey(categoryList()) }
                buttonLabel={ item }
            />

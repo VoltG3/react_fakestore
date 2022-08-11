@@ -1,57 +1,27 @@
 import React from 'react'
-import { StyledBtnAddToCart } from '../styles/component.BtnAddToCart.js'
+import { StyledBtnAddToCart } from '../styles/COMPONENT.BtnAddToCart.js'
 import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux'
-// import { CART_ADD_PRODUCT_TOTAL_COUNT } from '../actionTypes.js'
+
+import {
+    f_CART_ADD_PRODUCT_TOTAL_COUNT,
+    f_CART_REM_PRODUCT_TOTAL_COUNT,
+    f_CART_ADD_PRODUCT_ID,
+    f_CART_REM_PRODUCT_ID } from '../redux/action.js'
+
+import { strThisProductID } from '../utils/JSON_thisProductID.js'
 
 export default function BtnAddToCart(props) {
     const dispatch = useDispatch()
-
-    const CART_ADD_PRODUCT_TOTAL_COUNT = () => {
-        dispatch({
-            type: "CART_ADD_PRODUCT_TOTAL_COUNT"
-        })
-    }
-
-    const CART_REM_PRODUCT_TOTAL_COUNT = () => {
-        dispatch({
-            type: "CART_REM_PRODUCT_TOTAL_COUNT"
-        })
-    }
-
-    const CART_ADD_PRODUCT_ID = () => {
-        dispatch({
-            type: "CART_ADD_PRODUCT_ID",
-            payload: { thisProductID }
-        })
-    }
-
-    const CART_REM_PRODUCT_ID = () => {
-        dispatch({
-            type: "CART_REM_PRODUCT_ID",
-            payload: { thisProductID }
-        })
-    }
-
-    /**
-     *
-     * @type {[]|*[]|*}
-     */
-
     const [messageStatus, setMessageStatus] = React.useState("Add")
     const thisProductID = props.thisProductID
-
-    const t = useSelector(state => state.choisedProductsIdsArray)
-    console.log("arr", t)
 
     const [item, setItem] = React.useState({
         isActiv : true
     })
 
-    console.log("-----")
-    const x = props.thisProductID
-    console.log(x)
-
+    function getProductID() {
+        console.log("->", strThisProductID(thisProductID))
+    }
     function toggleIsActiv() {
         setItem( prevItem => ({
             ...prevItem,
@@ -59,13 +29,15 @@ export default function BtnAddToCart(props) {
         }));
 
         if(item.isActiv) {
-            setMessageStatus("Remove")
-            CART_ADD_PRODUCT_TOTAL_COUNT()
-            CART_ADD_PRODUCT_ID()
+            setMessageStatus("REMOVE")
+            dispatch(f_CART_ADD_PRODUCT_TOTAL_COUNT())
+            dispatch(f_CART_ADD_PRODUCT_ID({ thisProductID }))
+            getProductID()
         } else {
             setMessageStatus("Add")
-            CART_REM_PRODUCT_TOTAL_COUNT()
-            CART_REM_PRODUCT_ID()
+            dispatch(f_CART_REM_PRODUCT_TOTAL_COUNT())
+            dispatch(f_CART_REM_PRODUCT_ID())
+            getProductID()
         }
     }
 

@@ -1,4 +1,4 @@
-import data from "./data/data.js"
+import data from './data/data.js'
 
 export const categoryList = () => {
     let tmp = JSON.stringify(data, ["category"])
@@ -29,6 +29,5 @@ export const categoryList = () => {
         }
     }
 
-    // console.table(arrList)
     return arrList
 }

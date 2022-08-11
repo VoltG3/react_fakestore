@@ -1,7 +1,7 @@
 import {
     StyledHeaderContainer,
     StyledHeaderContainerTop,
-    StyledHeaderContainerBottom } from '../styles/section.header.style.js'
+    StyledHeaderContainerBottom } from '../styles/SECTION.header.style.js'
 
 import HeaderTools from './Header.tools.js'
 import NavigationCartAndUser from './Navigation.CartAndUser.js'

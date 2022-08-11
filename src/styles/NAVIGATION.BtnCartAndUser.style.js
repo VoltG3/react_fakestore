@@ -45,4 +45,3 @@ export const StyledIconTotalCount = styled.div`
   background-color: brown;
   color: white;
 `
-

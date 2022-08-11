@@ -9,7 +9,5 @@ export const Rate = (target) => {
     tmp = tmp.replace(/\"/g, "")
 
     let arrTmp = tmp.split(",")
-    // console.log(arrTmp)
-
     return arrTmp[0]
 }

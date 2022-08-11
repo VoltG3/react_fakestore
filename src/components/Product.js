@@ -1,7 +1,7 @@
 import React from 'react'
 import {
     StyledProductContainer,
-    StyledProductContainerInner } from '../styles/component.product.style.js'
+    StyledProductContainerInner } from '../styles/COMPONENT.product.style.js'
 
 import StarRating from 'react-svg-star-rating'
 import BtnAddToCart from './BtnAddToCart.js'

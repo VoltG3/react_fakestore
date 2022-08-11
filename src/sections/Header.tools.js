@@ -2,28 +2,22 @@ import React from 'react'
 import {
     StyledToolsContainer,
     StyledToolsBtn,
-    StyledToolsParagraph } from '../styles/section.header.tools.style.js'
-import { useDispatch } from 'react-redux'
+    StyledToolsParagraph } from '../styles/SECTION.header.tools.style.js'
+
+import {useDispatch, useSelector} from 'react-redux'
+import {
+    f_TEMPORARY_TRUE,
+    f_TEMPORARY_FALSE,
+    f_TEMPORARY_REMOVE } from '../redux/action.js'
 
 export default function HeaderTools() {
     const dispatch = useDispatch()
-
-    const INCREMENT_SHOW_BORDERS = () => {
-        dispatch({
-            type: "INCREMENT_SHOW_BORDERS"
-        })
-    }
-
-    const DECREMENT_SHOW_BORDERS = () => {
-        dispatch({
-            type: "DECREMENT_SHOW_BORDERS"
-        })
-    }
 
     const [item, setItem] = React.useState({
         isActiv : true
     })
 
+    const temporaryStatus = useSelector(state => state.arrID)
     function toggleIsActiv() {
         setItem( prevItem => ({
             ...prevItem,
@@ -31,11 +25,15 @@ export default function HeaderTools() {
         }));
 
         if(item.isActiv) {
-            INCREMENT_SHOW_BORDERS()
+            dispatch(f_TEMPORARY_TRUE())
+
         } else {
-            DECREMENT_SHOW_BORDERS()
+            dispatch(f_TEMPORARY_FALSE())
+            // dispatch(f_TEMPORARY_REMOVE())
         }
     }
+
+    console.log("redux -> temporary status is", temporaryStatus)
 
     return(
        <StyledToolsContainer>

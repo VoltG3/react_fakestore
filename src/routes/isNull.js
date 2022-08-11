@@ -1,7 +1,7 @@
 import {
     StyledMessageContainer,
     StyledMessageRed,
-    StyledPageContainer } from '../styles/routes.mutual.style.js'
+    StyledPageContainer } from '../styles/ROUTER.mutual.style.js'
 
 export default function IsNull() {
     return (
